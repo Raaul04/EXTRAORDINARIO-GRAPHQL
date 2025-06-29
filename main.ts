@@ -9,7 +9,7 @@ import { MongoClient } from "mongodb";
 const MONGO_URL = Deno.env.get('MONGO_URL');
 
 if (!MONGO_URL) {
-  throw new Error("La variable de entorno 'MONGO_URL' no está configurada");
+  throw new Error("La variable de entorno  no está configurada");
 }
 
 const mongoClient = new MongoClient(MONGO_URL);

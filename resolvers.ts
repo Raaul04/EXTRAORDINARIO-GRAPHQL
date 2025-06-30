@@ -66,11 +66,10 @@ export const resolvers = {
 
       return Data;
     },
+  },
 
     Character: {
-      id: (parent: Character) => {
-        return parent.id.toString();
-      },
+
       house: async (parent: Character) => {
         const AllPersonajes = await getAllCharacters();
 
@@ -89,5 +88,5 @@ export const resolvers = {
         return AllPersonajes!.filter((p) => p.name === parent.name);
       },
     },
-  },
+  
 };
